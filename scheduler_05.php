@@ -92,7 +92,7 @@
             }
          
             $eSocks = []; // dummy
-            // echo "aaaaa".PHP_EOL;
+            // echo "aaaaa".PHP_EOL; 阻塞
             if (!stream_select($rSocks, $wSocks, $eSocks, $timeout)) {
                 // echo "bbbbbb".PHP_EOL;
                 return;
@@ -120,7 +120,7 @@
 
         protected function ioPollTask() {
             while (true) {
-                // var_dump($this->taskQueue;
+                // 首次没有请求，则阻塞
                 if ($this->taskQueue->isEmpty()) {
                     $this->ioPoll(null);
                 } else {

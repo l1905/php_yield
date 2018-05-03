@@ -36,9 +36,11 @@
             yield;
         }
     }
-     
+    
+    //主协程
     function task() {
         $tid = (yield getTaskId());
+        
         $childTid = (yield newTask(childTask()));
      
         for ($i = 1; $i <= 6; ++$i) {

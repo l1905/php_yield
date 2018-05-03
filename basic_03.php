@@ -20,7 +20,7 @@
     }
 
     /**
-     * 任务调度相关
+     * 任务调度相关，动态传值给迭代器 task_id
      * @DateTime 2018-04-23
      * @return   [type]           [description]
      */

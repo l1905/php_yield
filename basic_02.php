@@ -3,13 +3,15 @@
     include "task_02.php";
     include "scheduler_02.php";
 
+    //迭代器任务1
     function task1() {
         for ($i = 1; $i <= 10; ++$i) {
             echo "This is task 1 iteration $i.\n";
             yield $i;
         }
     }
-     
+    
+    //迭代器任务2
     function task2() {
         for ($i = 100; $i <= 110; ++$i) {
             echo "This is task 2 iteration $i.\n";
